@@ -1,0 +1,16 @@
+name: Hello.txt workflow
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  show-hello-content:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Display Content
+        run: cat hello.txt
